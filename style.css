@@ -13,35 +13,32 @@ body {
   min-height: 150px;
   max-width: 500px;
   margin: 80px auto 20px;
-  align-self: center;
   padding: 10px 30px 30px;
   border-radius: 15px;
 }
 
-.title {
-  font-size: medium;
+h1 {
+  font-size: 2rem;
   text-align: center;
 }
 
 .input-list {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+
   margin-bottom: 10px;
-  padding-left: 10px;
   border-radius: 15px;
 }
 
 input {
-  flex: 1;
   border: none;
   outline: none;
   background-color: rgb(231, 235, 228);
   border-radius: 20px;
-  padding: 9px;
+  padding: 10px;
+  width: 440px;
 }
 
-button {
+#plusButton {
   cursor: pointer;
   border: none;
   outline: none;
@@ -49,4 +46,14 @@ button {
   border-radius: 50px;
   padding: 9px;
   background-color: rgb(195, 199, 195);
+  position: fixed;
+  right: 165px;
+}
+
+ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }

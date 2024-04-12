@@ -8,13 +8,22 @@
   </head>
   <body>
     <div class="box">
-      <div class="title">
-        <h1>To-Do List</h1>
-      </div>
+      <h1>To-Do List</h1>
+
       <div class="input-list">
         <input type="text" id="write-text" placeholder="I have to do..." />
-        <button>+</button>
+        <!-- connect add task function in javascript to button --><button
+          onclick="addTask()"
+          id="plusButton"
+        >
+          +
+        </button>
       </div>
+      <!-- for constant in javascript -->
+      <ul id="tasksList"></ul>
     </div>
+    <script src="script.js"></script>
+
+    <div class="item"></div>
   </body>
 </html>

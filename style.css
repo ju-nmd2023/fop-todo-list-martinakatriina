@@ -24,11 +24,14 @@ h1 {
 
 .input-list {
   align-items: center;
-
+  justify-content: space-between;
   margin-bottom: 10px;
   border-radius: 15px;
 }
-
+#date {
+  font-size: medium;
+  padding-left: 14px;
+}
 input {
   border: none;
   outline: none;
@@ -49,6 +52,10 @@ input {
   position: fixed;
   right: 165px;
 }
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 
 ul li {
   list-style-type: none;
@@ -56,4 +63,14 @@ ul li {
   padding: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
+  border-radius: 5px;
+}
+
+.deletebutton {
+  margin-left: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: fixed;
+  right: 150px;
 }

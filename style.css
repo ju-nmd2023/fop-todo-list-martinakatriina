@@ -22,23 +22,8 @@ h1 {
   text-align: center;
 }
 
-.input-list {
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  border-radius: 15px;
-  width: 100%;
-}
 #date {
   font-size: medium;
-  padding-left: 14px;
-}
-input {
-  border: none;
-  outline: none;
-  background-color: rgb(231, 235, 228);
-  border-radius: 20px;
-  padding: 10px;
   width: 95%;
 }
 
@@ -46,24 +31,32 @@ input {
   cursor: pointer;
   border: none;
   outline: none;
-  background: transparent;
   border-radius: 50px;
-  padding: 9px;
   background-color: rgb(195, 199, 195);
-  position: fixed;
-  right: 19%;
   width: 2.5rem;
+  padding: 10px;
+}
+#write-text {
+  border: none;
+  outline: none;
+  background-color: rgb(231, 235, 228);
+  border-radius: 20px;
+  padding: 10px;
+  width: 85%;
 }
 
-ul {
+li {
   list-style-type: none;
-  margin-bottom: 5px;
-  padding: 10px;
   background-color: #f0f0f0;
   border-radius: 20px;
-  width: 440px;
-  min-height: 15px;
-  width: 95%;
+  width: 100%;
+  padding-left: 12px;
+}
+ul {
+  border: none;
+  font-size: smaller;
+  padding: 0;
+  margin: 0;
 }
 
 .checked {
@@ -71,18 +64,21 @@ ul {
   opacity: 0.5;
 }
 
-.deletebutton {
+.deleteButton {
   cursor: pointer;
   border: none;
   outline: none;
   background: transparent;
   border-radius: 50px;
-  padding: 9px;
+  padding: 10px;
   background-color: #c4c1c1;
-  position: fixed;
-  right: 18%;
   width: 2.5rem;
 }
-.tasksList {
-  margin: 0;
+
+.newtask {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 95.5%;
+  margin-top: 5px;
 }

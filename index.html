@@ -10,20 +10,19 @@
     <div class="box">
       <h1>To-Do List</h1>
       <h2><span id="date"></span></h2>
-      <div class="input-list">
+
+      <div class="inputBox">
         <input type="text" id="write-text" placeholder="I have to do..." />
-        <!-- connect add task function in javascript to button --><button
-          onclick="addTask()"
-          id="plusButton"
-        >
-          +
-        </button>
+        <!-- connect add task function in javascript to button -->
+        <button onclick="addTask()" id="plusButton">+</button>
       </div>
+
       <!-- for constant in javascript -->
-      <ul id="tasksList"></ul>
+      <div class="task-container">
+        <ul id="tasksList"></ul>
+      </div>
     </div>
     <script src="script.js"></script>
-
-    <div class="item"></div>
+    <div class="items"></div>
   </body>
 </html>

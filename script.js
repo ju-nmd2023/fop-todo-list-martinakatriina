@@ -8,7 +8,7 @@ const taskList = document.getElementById("tasksList");
 //load all tasks from local storage when window loads
 window.addEventListener("load", function loadTasks() {
   // give a name to the content of local storage
-  let storedData = localStorage.getItem("itemsArray");
+  let storedData = localStorage.getItem("items");
   //if its not empty, show the data
   if (storedData) {
     itemsArray = JSON.parse(storedData);
@@ -35,6 +35,7 @@ function renderTasks() {
     // make new list item attatched to each task created
     let newTask = document.createElement("li");
     newTask.textContent = task.text;
+    newTask.setAttribute("class", "newtask");
     // make new  delete button for each task
     if (task.checked) {
       newTask.classList.add("checked");
@@ -52,7 +53,7 @@ function renderTasks() {
       // call function when the delete button is clicked
       removeTask(index);
     };
-    removeButton.setAttribute("class", "deletebutton");
+    removeButton.setAttribute("class", "deleteButton");
     // connects delete buttons to each new task, and each new task to the tasks list
     newTask.appendChild(removeButton);
     taskList.appendChild(newTask);
@@ -74,9 +75,9 @@ function displayDate() {
   console.log(date);
 }
 
-window.onload = function () {
-  displayDate();
-};
+window.onload = displayDate();
+{
+}
 // stores array as a string in local storage
 function saveTasks() {
   localStorage.setItem("items", JSON.stringify(itemsArray));

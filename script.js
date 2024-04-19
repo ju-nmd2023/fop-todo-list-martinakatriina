@@ -1,9 +1,24 @@
+/* reference to date function & setting attributes to const for styling 
+JavaScript date objects. (n.d.). https://www.w3schools.com/js/js_dates.asp
+Element: setAttribute() method - Web APIs | MDN. (2024, April 6). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+ */
+
+// Display date
+function displayDate() {
+  const date = new Date().toDateString();
+  document.querySelector("#date").textContent = date;
+}
+
+window.onload = displayDate();
+{
+}
+
 // make array where to store each to do task added
 let itemsArray = [];
 //define where input is written, link to hmtl ID
-const inputBox = document.getElementById("write-text");
+const inputBox = document.getElementById("input-text");
 //get reference to the task lists, link to ID
-const taskList = document.getElementById("tasksList");
+const taskList = document.getElementById("tasks-list");
 
 //load all tasks from local storage when window loads
 window.addEventListener("load", function loadTasks() {
@@ -15,7 +30,7 @@ window.addEventListener("load", function loadTasks() {
   }
   renderTasks();
 });
-//adding tasks
+
 function addTask() {
   // give name to content of input box
   const taskText = inputBox.value;
@@ -33,9 +48,9 @@ function renderTasks() {
   // apply conditions to all new tasks
   itemsArray.forEach(function (task, index) {
     // make new list item attatched to each task created
-    let newTask = document.createElement("li");
+    const newTask = document.createElement("li");
     newTask.textContent = task.text;
-    newTask.setAttribute("class", "newtask");
+    newTask.setAttribute("class", "new-task");
     // make new  delete button for each task
     if (task.checked) {
       newTask.classList.add("checked");
@@ -53,7 +68,7 @@ function renderTasks() {
       // call function when the delete button is clicked
       removeTask(index);
     };
-    removeButton.setAttribute("class", "deleteButton");
+    removeButton.setAttribute("class", "delete-button");
     // connects delete buttons to each new task, and each new task to the tasks list
     newTask.appendChild(removeButton);
     taskList.appendChild(newTask);
@@ -66,18 +81,7 @@ function removeTask(index) {
   renderTasks();
   saveTasks();
 }
-// savins tasks to local storage
-function displayDate() {
-  let date = new Date();
-  date = date.toString().split(" ");
-  document.querySelector("#date").innerHTML =
-    date[1] + " " + date[2] + " " + date[3];
-  console.log(date);
-}
 
-window.onload = displayDate();
-{
-}
 // stores array as a string in local storage
 function saveTasks() {
   localStorage.setItem("items", JSON.stringify(itemsArray));

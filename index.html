@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo List App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/kkq3lxf.css" />
   </head>
   <body>
     <div class="box">
       <h1>To-Do List</h1>
       <h2><span id="date"></span></h2>
 
-      <div class="inputBox">
-        <input type="text" id="write-text" placeholder="I have to do..." />
+      <div>
+        <input type="text" id="input-text" placeholder="I have to do..." />
         <!-- connect add task function in javascript to button -->
-        <button onclick="addTask()" id="plusButton">+</button>
+        <button onclick="addTask()" id="plus-button">+</button>
       </div>
 
       <!-- for constant in javascript -->
       <div class="task-container">
-        <ul id="tasksList"></ul>
+        <ul id="tasks-list"></ul>
       </div>
     </div>
-    <script src="script.js"></script>
     <div class="items"></div>
+    <script src="script.js"></script>
   </body>
 </html>
